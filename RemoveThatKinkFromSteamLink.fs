@@ -20,17 +20,17 @@ type RemoveThatKinkFromSteamLink() =
 
     override ResoniteModBase.Name
         with get (): string = "RemoveThatKinkFromSteamLink"
-    
+
 
     override ResoniteModBase.Author
         with get (): string = "Cyro"
-    
+
 
     override ResoniteModBase.Version
         with get (): string = typeof<RemoveThatKinkFromSteamLink>.Assembly.GetName().Version.ToString()
 
 
-    override ResoniteModBase.OnEngineInit (): unit = 
+    override ResoniteModBase.OnEngineInit (): unit =
         // RemoveThatKinkFromSteamLink.harmonyInstance <- new Harmony "net.Cyro.RemoveThatKinkFromSteamLink"
 
         RemoveThatKinkFromSteamLink.config <- base.GetConfiguration ()
@@ -61,5 +61,3 @@ module BootStrap_Patches =
     let Test() =
         RemoveThatKinkFromSteamLink.Msg "Successful bootstrap postfix from F#!!!!!!!!!"
 *)
-
-
